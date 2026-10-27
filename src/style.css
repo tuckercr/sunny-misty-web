@@ -1,0 +1,431 @@
+@import "@fontsource/baloo-2/latin-600.css";
+@import "@fontsource/baloo-2/latin-700.css";
+
+/* Brand colours, from the apps: LaunchBackground (sky) and the notification accent (deep). */
+:root {
+  --sky: #0288d1;
+  --deep: #01579b;
+  --bg: #f3f9fe;
+  --surface: #ffffff;
+  --card: #d6ecf9;
+  --text: #0d1b2a;
+  --muted: #4a5b6c;
+  --border: #c9dfee;
+  --on-sky: #ffffff;
+  --link: #01579b;
+  --radius: 20px;
+  --page: 1080px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1b2a;
+    --surface: #13263a;
+    --card: #17324d;
+    --text: #e8f1f8;
+    --muted: #a7b8c8;
+    --border: #23405c;
+    --link: #8fd0f5;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--link);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header and footer */
+
+.site-header {
+  background: var(--sky);
+  color: var(--on-sky);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 28px 0 40px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+/* Home: hero */
+
+.hero {
+  background: var(--sky);
+  color: var(--on-sky);
+  padding: 48px 0 0;
+  overflow: hidden;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 40px;
+}
+
+.hero-text {
+  padding-bottom: 64px;
+}
+
+.hero-brand {
+  width: min(360px, 100%);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 34em;
+  margin: 0 0 28px;
+}
+
+.hero-phone {
+  justify-self: center;
+  width: min(320px, 100%);
+  margin-bottom: -6px;
+}
+
+.phone {
+  border-radius: 36px;
+  border: 8px solid #0d1b2a;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  background: #0d1b2a;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.25);
+}
+
+/* Store buttons */
+
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.store {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 56px;
+  padding: 8px 20px;
+  border-radius: 14px;
+  background: #0d1b2a;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.store small {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.store strong {
+  font-size: 1.15rem;
+}
+
+.store:hover {
+  background: #000000;
+}
+
+.store[aria-disabled="true"] {
+  background: transparent;
+  border: 2px solid rgb(255 255 255 / 0.7);
+  cursor: default;
+}
+
+/* Home: sections */
+
+section {
+  padding: 72px 0;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.section-lead {
+  text-align: center;
+  color: var(--muted);
+  max-width: 36em;
+  margin: 0 auto 40px;
+}
+
+.pets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.pet {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.pet h3 {
+  font-size: 1.6rem;
+}
+
+.pet p {
+  margin: 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3em;
+}
+
+.feature p {
+  margin: 0;
+}
+
+.screens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.screens figure {
+  margin: 0;
+}
+
+.screens img {
+  border-radius: 28px;
+  border: 6px solid #0d1b2a;
+  background: #0d1b2a;
+}
+
+.screens figcaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.get {
+  background: var(--sky);
+  color: var(--on-sky);
+  text-align: center;
+}
+
+.get .stores {
+  justify-content: center;
+}
+
+.get p {
+  margin: 0 auto 28px;
+  max-width: 32em;
+}
+
+/* Text pages: privacy and support */
+
+.prose {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+
+.prose h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+}
+
+.prose h2 {
+  font-size: 1.6rem;
+  margin-top: 1.6em;
+}
+
+.prose h3 {
+  font-size: 1.2rem;
+  margin-top: 1.4em;
+}
+
+.prose li {
+  margin-bottom: 0.4em;
+}
+
+.updated {
+  color: var(--muted);
+}
+
+.contact-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .hero-text {
+    padding-bottom: 32px;
+  }
+
+  .hero-phone {
+    width: min(260px, 80%);
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .screens {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrap,
+  .prose {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header nav {
+    gap: 14px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  section {
+    padding: 52px 0;
+  }
+
+  .pets,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .store {
+    flex: 1 1 100%;
+  }
+}
