@@ -24,11 +24,11 @@
 
     <main class="prose">
       <h1>Sunny &amp; Misty Privacy Policy</h1>
-      <p class="updated">Last updated: November 2, 2026</p>
+      <p class="updated">Last updated: November 6, 2026</p>
 
       <h2>Summary</h2>
       <p>Sunny &amp; Misty is a weather app made by FangJet LLC ("we", "our", or "us") for iPhone, iPad and Android. It needs no account, shows no ads and does not track you across other apps or websites. We do not sell or rent your information.</p>
-      <p>To show you the weather, the app sends the location you ask about to weather services. It also sends anonymous usage statistics, which you can turn off. This page explains exactly what is sent, to whom, and why.</p>
+      <p>To show you the weather, the app sends the location you ask about to weather services, and to name your current location it asks your phone's own place lookup (Apple's or Google's). It also sends anonymous usage statistics, which you can turn off. This page explains exactly what is sent, to whom, and why.</p>
 
       <h2>Information kept on your device</h2>
       <ul>
@@ -41,6 +41,7 @@
       <h2>Location</h2>
       <p>Location access is optional. If you allow it, the app reads your device's location to show the weather where you are. Without it, you can add any city by name.</p>
       <p>To fetch a forecast, the app sends the coordinates of the city you are viewing (your current location, if you chose it) to the weather services listed below. City names you type are sent to OpenWeather to find matching places. We do not run servers of our own, so your location is never sent to or stored by FangJet. The weather services receive it only to answer the request; their own privacy policies describe how long they keep request logs.</p>
+      <p>When you view your current location, the app also sends its coordinates to your phone's own place lookup to find the name of the town, such as "Knoxville": Apple's on iPhone and iPad, and Google's on Android. The name is kept on your device, and the app asks again only after you have moved about a kilometre (just over half a mile). Cities you add yourself already have their names, so they are not looked up.</p>
 
       <h2>Usage statistics</h2>
       <p>The app uses Google Analytics for Firebase to count how its features are used, so we can improve it. It records four events: finishing onboarding, adding a city, opening Settings, and a weather request failing (with the type of error, such as "offline"). Firebase also records standard app events such as app opens, sessions and updates.</p>
@@ -61,10 +62,12 @@
       <h2>Third-party services</h2>
       <p>The app talks to these services directly from your device. Like any website, each one also receives your IP address when the app contacts it.</p>
       <ul>
-      <li><strong>OpenWeather</strong>: current conditions, forecasts and city search. <a href="https://openweather.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">OpenWeather privacy policy</a></li>
-      <li><strong>Open-Meteo</strong>: hourly and 7-day forecasts, and air quality. <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">Open-Meteo terms and privacy</a></li>
+      <li><strong>OpenWeather</strong>: city search, and current conditions and forecasts when Open-Meteo can't provide them. <a href="https://openweather.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">OpenWeather privacy policy</a></li>
+      <li><strong>Open-Meteo</strong>: current conditions, hourly and 7-day forecasts, and air quality. <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">Open-Meteo terms and privacy</a></li>
       <li><strong>RainViewer</strong>: radar images for the map area around your city. <a href="https://www.rainviewer.com/privacy.html" target="_blank" rel="noopener noreferrer">RainViewer privacy policy</a></li>
       <li><strong>OpenStreetMap</strong>: the base map under the radar, for the same map area. <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OpenStreetMap Foundation privacy policy</a></li>
+      <li><strong>Apple</strong> (iPhone and iPad): the name of your current location, from Apple's place lookup. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple privacy policy</a></li>
+      <li><strong>Google</strong> (Android): the name of your current location, from Android's place lookup, which Google Play services provides. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google privacy policy</a></li>
       <li><strong>Google Firebase</strong>: usage statistics, remote configuration and, on Android, crash reports. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy and security in Firebase</a></li>
       </ul>
 
