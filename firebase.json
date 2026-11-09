@@ -78,7 +78,7 @@
         ]
       },
       {
-        "source": "/@(privacy|support)",
+        "source": "/@(privacy|support|terms)",
         "headers": [
           {
             "key": "Cache-Control",
