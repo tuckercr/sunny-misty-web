@@ -7,7 +7,7 @@
       "**/node_modules/**"
     ],
     "cleanUrls": true,
-    "trailingSlashBehavior": "REMOVE",
+    "trailingSlash": false,
     "redirects": [
       {
         "source": "/privacy-policy",
