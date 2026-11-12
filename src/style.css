@@ -167,6 +167,12 @@ img {
   margin-bottom: 24px;
 }
 
+.hero .eyebrow {
+  color: var(--on-sky);
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
 .hero h1 {
   font-size: clamp(2.4rem, 5.5vw, 3.6rem);
 }
