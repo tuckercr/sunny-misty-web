@@ -286,6 +286,10 @@ section {
   padding: 24px;
 }
 
+.tinted .feature {
+  background: var(--surface);
+}
+
 .feature h3 {
   font-size: 1.3rem;
   margin-bottom: 0.3em;
@@ -297,8 +301,10 @@ section {
 
 .screens {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+  justify-content: center;
+  gap: 32px;
+  margin-top: 48px;
 }
 
 .screens figure {
@@ -331,6 +337,203 @@ section {
 .get p {
   margin: 0 auto 28px;
   max-width: 32em;
+}
+
+/* Home: promises under the store buttons */
+
+.promises {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.promises li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.18);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Home: text beside a phone */
+
+.tinted {
+  background: var(--card);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.split.reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.split.reverse .split-text {
+  order: 2;
+}
+
+.split h2 {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+}
+
+.split-phone {
+  margin: 0;
+  justify-self: center;
+  width: min(300px, 100%);
+}
+
+.split-phone img,
+.moods img,
+.screens img {
+  border-radius: 28px;
+  border: 6px solid #0d1b2a;
+  background: #0d1b2a;
+  box-shadow: 0 16px 40px rgb(13 27 42 / 0.18);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--link);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.checks li {
+  position: relative;
+  padding-left: 32px;
+}
+
+.checks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sky);
+  mask: radial-gradient(circle, #000 0 4px, transparent 4.5px), linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0 0;
+}
+
+.tiles div {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.tiles dt {
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--link);
+}
+
+.tiles dd {
+  margin: 2px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Home: the pets in different weather */
+
+.moods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 260px));
+  justify-content: center;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.moods figure {
+  margin: 0;
+}
+
+.moods figcaption {
+  text-align: center;
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-top: 14px;
+}
+
+.section-note {
+  text-align: center;
+  color: var(--muted);
+  max-width: 36em;
+  margin: 40px auto 0;
+}
+
+/* Home: questions */
+
+.narrow {
+  max-width: 760px;
+}
+
+details {
+  border-bottom: 1px solid var(--border);
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 36px 18px 0;
+  position: relative;
+  font-family: "Baloo 2", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: var(--link);
+}
+
+details[open] summary::after {
+  content: "\2212";
+}
+
+details p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.more {
+  text-align: center;
+  margin-top: 32px;
 }
 
 /* Text pages: privacy and support */
@@ -392,8 +595,23 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 
-  .screens {
-    grid-template-columns: 1fr 1fr;
+  .split,
+  .split.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .split.reverse .split-text {
+    order: 0;
+  }
+
+  .split-phone {
+    width: min(260px, 80%);
+  }
+
+  .moods {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
   }
 }
 
@@ -421,8 +639,18 @@ section {
   }
 
   .pets,
-  .features {
+  .features,
+  .tiles {
     grid-template-columns: 1fr;
+  }
+
+  .moods {
+    grid-template-columns: minmax(0, 260px);
+  }
+
+  .screens {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
   }
 
   .store {
