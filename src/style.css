@@ -657,3 +657,65 @@ details p {
     flex: 1 1 100%;
   }
 }
+
+/* The unlisted walk card page: numbered steps, what each says, and wide tables that scroll. */
+.steps {
+  padding-left: 1.4em;
+}
+
+.steps > li {
+  margin-bottom: 1.6em;
+}
+
+.steps h2 {
+  font-size: 1.3rem;
+  margin: 0 0 0.3em;
+}
+
+.says {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+
+.says dt {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.says dt:first-child {
+  margin-top: 0;
+}
+
+.says dd {
+  margin: 2px 0 0;
+}
+
+.says ul {
+  margin: 4px 0 0;
+  padding-left: 1.2em;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.prose table {
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 560px;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose thead th {
+  background: var(--card);
+}

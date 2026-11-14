@@ -94,6 +94,15 @@
             "value": "public, max-age=86400"
           }
         ]
+      },
+      {
+        "source": "/walk-card",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
       }
     ]
   }
