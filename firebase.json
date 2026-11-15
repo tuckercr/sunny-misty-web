@@ -78,7 +78,7 @@
         ]
       },
       {
-        "source": "/@(privacy|support|terms|paw-safety)",
+        "source": "/@(privacy|support|terms|paw-safety|best-time-to-walk)",
         "headers": [
           {
             "key": "Cache-Control",
