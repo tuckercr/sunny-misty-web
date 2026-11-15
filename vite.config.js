@@ -11,6 +11,7 @@ export default defineConfig({
         privacy: resolve(import.meta.dirname, 'privacy/index.html'),
         support: resolve(import.meta.dirname, 'support/index.html'),
         terms: resolve(import.meta.dirname, 'terms/index.html'),
+        pawSafety: resolve(import.meta.dirname, 'paw-safety/index.html'),
         notFound: resolve(import.meta.dirname, '404.html'),
       },
     },

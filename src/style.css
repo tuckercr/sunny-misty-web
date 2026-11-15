@@ -135,6 +135,7 @@ img {
 
 .site-footer nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -655,5 +656,75 @@ details p {
 
   .store {
     flex: 1 1 100%;
+  }
+}
+
+/* Paw safety: an article page in .prose */
+
+.lead {
+  font-size: 1.15rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.prose th,
+.prose td {
+  text-align: left;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.prose th {
+  background: var(--card);
+  font-weight: 600;
+}
+
+.prose .stores {
+  margin: 24px 0;
+}
+
+.screenshot {
+  float: right;
+  width: 220px;
+  margin: 0 0 16px 24px;
+}
+
+.screenshot img {
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
+}
+
+.screenshot figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.prose h2 {
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .screenshot {
+    float: none;
+    width: min(240px, 70%);
+    margin: 16px auto;
   }
 }
