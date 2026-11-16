@@ -13,6 +13,15 @@ npm install
 npm run dev
 ```
 
+## Pages that repeat the apps' numbers
+
+`paw-safety/index.html` lists Paw Check's five bands with the apps' default pavement thresholds
+(40, 46 and 57.2 °C, and 0 °C). They are the Remote Config keys `walk_warm_pavement_c`,
+`walk_hot_pavement_c`, `walk_dangerous_pavement_c` and `walk_icy_pavement_c`, with their defaults in
+both apps and in the template in the Android repo (`firebase/remoteconfig.template.json`). When one
+of them changes, update the table on that page (both °C and °F) and the walk card's caption example
+under it, then deploy.
+
 ## Deploy
 
 Hosted on Firebase Hosting in the app's own Firebase project, `cats-dogs-weather`.

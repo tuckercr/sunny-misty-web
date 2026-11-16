@@ -78,7 +78,7 @@
         ]
       },
       {
-        "source": "/@(privacy|support|terms)",
+        "source": "/@(privacy|support|terms|paw-safety|walk-card)",
         "headers": [
           {
             "key": "Cache-Control",

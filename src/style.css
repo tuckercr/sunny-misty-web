@@ -135,6 +135,7 @@ img {
 
 .site-footer nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -702,20 +703,86 @@ details p {
   margin: 16px 0;
 }
 
-.prose table {
-  border-collapse: collapse;
+.table-scroll table {
   font-size: 0.95rem;
   min-width: 560px;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.table-scroll th,
+.table-scroll td {
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+/* Paw safety: an article page in .prose */
+
+.lead {
+  font-size: 1.15rem;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .prose th,
 .prose td {
-  border: 1px solid var(--border);
-  padding: 8px 10px;
   text-align: left;
-  vertical-align: top;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
 }
 
-.prose thead th {
+.prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.prose th {
   background: var(--card);
+  font-weight: 600;
+}
+
+.prose .stores {
+  margin: 24px 0;
+}
+
+.screenshot {
+  float: right;
+  width: 220px;
+  margin: 0 0 16px 24px;
+}
+
+.screenshot img {
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
+}
+
+.screenshot figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.prose h2 {
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .screenshot {
+    float: none;
+    width: min(240px, 70%);
+    margin: 16px auto;
+  }
 }

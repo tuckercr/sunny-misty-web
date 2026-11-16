@@ -29,6 +29,7 @@ export default defineConfig({
         support: resolve(import.meta.dirname, 'support/index.html'),
         walkCard: resolve(import.meta.dirname, 'walk-card/index.html'),
         terms: resolve(import.meta.dirname, 'terms/index.html'),
+        pawSafety: resolve(import.meta.dirname, 'paw-safety/index.html'),
         notFound: resolve(import.meta.dirname, '404.html'),
       },
     },
