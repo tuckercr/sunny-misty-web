@@ -682,6 +682,7 @@ details p {
 .prose th,
 .prose td {
   text-align: left;
+  vertical-align: top;
   padding: 10px 16px;
   border-bottom: 1px solid var(--border);
 }
@@ -722,6 +723,11 @@ details p {
 }
 
 @media (max-width: 600px) {
+  .prose th,
+  .prose td {
+    padding: 8px 10px;
+  }
+
   .screenshot {
     float: none;
     width: min(240px, 70%);

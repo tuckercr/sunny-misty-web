@@ -15,12 +15,18 @@ npm run dev
 
 ## Pages that repeat the apps' numbers
 
-`paw-safety/index.html` lists Paw Check's five bands with the apps' default pavement thresholds
-(40, 46 and 57.2 °C, and 0 °C). They are the Remote Config keys `walk_warm_pavement_c`,
-`walk_hot_pavement_c`, `walk_dangerous_pavement_c` and `walk_icy_pavement_c`, with their defaults in
-both apps and in the template in the Android repo (`firebase/remoteconfig.template.json`). When one
-of them changes, update the table on that page (both °C and °F) and the walk card's caption example
-under it, then deploy.
+Two guides show the apps' default Remote Config values. The defaults live in both apps and in the
+template in the Android repo (`firebase/remoteconfig.template.json`). When one of these changes,
+update the page (both °C and °F where it gives them), then deploy:
+
+- `paw-safety/index.html`: Paw Check's five bands, from `walk_warm_pavement_c`,
+  `walk_hot_pavement_c`, `walk_dangerous_pavement_c` and `walk_icy_pavement_c` (40, 46 and
+  57.2 °C, and 0 °C), and the walk card's caption example under the table.
+- `best-time-to-walk/index.html`: what makes a good hour for a walk, from `walk_max_rain_chance`
+  (30%), `walk_comfort_min_c` and `walk_comfort_max_c` (3 and 27 °C), `walk_warm_pavement_c`
+  (40 °C), `walk_hours_start` and `walk_hours_end` (7 AM and 8 PM), the near gale (Beaufort 7)
+  and `walk_bad_air_band`. It also describes the walk card, so check it when the card's wording
+  changes.
 
 ## Deploy
 
