@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How the Walk Card Decides | Sunny &amp; Misty</title>
+    <!-- Unlisted: linked from nowhere, left out of the sitemap and kept out of search. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="How the Sunny &amp; Misty walk card picks what it says, and why." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sunnyandmisty.com/walk-card" />
+    <meta property="og:site_name" content="Sunny &amp; Misty" />
+    <meta property="og:title" content="How the Walk Card Decides | Sunny &amp; Misty" />
+    <meta property="og:description" content="How the Sunny &amp; Misty walk card picks what it says, and why." />
+    <meta property="og:image" content="https://sunnyandmisty.com/og-image.png" />
+    <meta name="theme-color" content="#0288d1" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="/"><img src="/src/assets/icon.webp" alt="" width="36" height="36" /><span>Sunny &amp; Misty</span></a>
+        <nav>
+          <a href="/support">Support</a>
+          <a href="/privacy">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Keep in step with WalkCardContent and WalkAdvisor in both apps (iOS WalkCardContent.swift,
+         Android model/WalkCardContent.kt). -->
+    <main class="prose">
+      <h1>How the walk card decides</h1>
+      <p class="updated">Last updated: November 14, 2026. The iPhone and Android apps work the same way.</p>
+
+      <p>The walk card shows for people who said they have a dog. It answers one question: when is the best time to walk today? The app checks the hour under way first and then each hour after it, and the first step below that matches decides what the card says.</p>
+
+      <ol class="steps">
+        <li>
+          <h2>Hurricane force wind?</h2>
+          <p>Hurricane force wind (Beaufort 12) now, gusts included, or forecast in the next 6 hours. This card shows for everyone, dog or not.</p>
+          <dl class="says">
+            <dt>Now</dt><dd><b>Danger</b>: "Hurricane force winds". "Stay inside, away from the windows."</dd>
+            <dt>Coming</dt><dd><b>Danger</b>: "Hurricane force winds from 6 PM". "Get everyone inside before then."</dd>
+          </dl>
+        </li>
+        <li>
+          <h2>Is now a good time?</h2>
+          <p>The hour under way passes every check in <a href="#good-hour">What makes an hour good</a>.</p>
+          <dl class="says">
+            <dt>Headline</dt><dd>"Now is a great time"</dd>
+            <dt>Caption</dt><dd>The first of these that applies:
+              <ul>
+                <li>The good spell ends within 6 hours: "Good until 5 PM, then rain." (or then maybe rain, snow, storms, very windy, too hot, hot pavement, too cold, bad air). Another spell later today adds "Good again 6 to 8 PM."</li>
+                <li>Air that's one band short of bad: "Air's not great. Short walks for older and flat-faced dogs."</li>
+                <li>Sunset within 3 hours: "Gets dark in about 2 hours.", "Gets dark in about an hour." or "Getting dark soon."</li>
+                <li>Otherwise no caption.</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <h2>A good hour later today?</h2>
+          <p>Before dawn the rest of the night counts as today, so a good hour at 7 AM is still "today".</p>
+          <dl class="says">
+            <dt>Headline</dt><dd>The spell of good hours, up to the first hour that isn't good: "5 to 8 PM", "11 AM to 1 PM". "Around 8 PM" when the forecast ends first.</dd>
+            <dt>Caption</dt><dd>
+              <ul>
+                <li>Another spell later today comes first: "Or 7 to 9 PM." The title becomes <b>Best Walk Times</b>.</li>
+                <li>Then why not now: the "Bad now" caption from <a href="#captions">the captions</a> when there is one, otherwise the "Better later" one ("The rain's gone by then."). Nothing when it's only too dark now.</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <h2>Nothing good left today</h2>
+          <p>What it says depends on the time of day, in the city's own time zone.</p>
+          <dl class="says">
+            <dt>Morning</dt><dd>"Not a good day for walkies"</dd>
+            <dt>Afternoon</dt><dd>"No more walkies today"</dd>
+            <dt>Caption</dt><dd>The "Bad now" caption when there is one, otherwise the "Nothing today" one ("Rainy out.").</dd>
+            <dt>Night, with a good hour tomorrow</dt><dd>The only time the card looks to tomorrow: "Tomorrow 7 to 10 AM", and maybe "Or 2 to 4 PM."</dd>
+            <dt>Night, with none tomorrow either</dt><dd>"No walkies tomorrow either"</dd>
+          </dl>
+          <p>Night is after sunset, by the clock. Morning is before noon.</p>
+        </li>
+      </ol>
+
+      <p><b>Storms on their way.</b> Whatever the step, likely thunderstorms in the next 6 hours add "Storms from 4 PM." to the caption, unless it already says storms are coming.</p>
+
+      <h2 id="good-hour">What makes an hour good</h2>
+      <p>An hour is good only when it passes every check. These are the default limits; the app's remote settings can change them. When several checks fail, the worst one gives the reason.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Check</th><th>Good</th><th>Not now (a wait)</th><th>Potty breaks only</th><th>Keep pets inside</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Time</th><td>7 AM to 8 PM, in daylight</td><td>Outside those hours, or dark</td><td></td><td></td></tr>
+            <tr><th>Rain or snow</th><td>Under 30% chance, as shown on the hourly forecast, and not falling now</td><td>30% or more, or falling now (60% and up is "rain", under that "maybe rain")</td><td></td><td></td></tr>
+            <tr><th>Thunderstorms</th><td>Under 30%</td><td>30% to 59%</td><td></td><td>60% or more, or now</td></tr>
+            <tr><th>Feels like</th><td>3 to 27 °C</td><td>Under 3 °C, or over 27 °C</td><td>0 °C and under, or 30 °C and over</td><td></td></tr>
+            <tr><th>Wind (Beaufort)</th><td>Under 7</td><td>7, a near gale</td><td>8 and 9, a gale</td><td>10 and 11, a storm</td></tr>
+            <tr><th>Pavement</th><td>Under 40 °C</td><td>40 to 46 °C</td><td>46 to 57 °C</td><td>57 °C and over</td></tr>
+            <tr><th>Air quality band</th><td>0 to 2 (2 adds a word for older and flat-faced dogs)</td><td></td><td>3 and 4</td><td>5, the worst</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The pavement is only checked for people with a dog. The app shows Fahrenheit when you choose it; the limits are the same.</p>
+
+      <h2 id="captions">The captions</h2>
+      <p>What the card says about each reason. "Bad now" is used when now is potty breaks only or worse (and for any warm pavement). "Better later" is used under a good hour later today, and "Nothing today" when there's none, by day.</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Reason</th><th>Bad now</th><th>Better later</th><th>Nothing today</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Rain</th><td></td><td>The rain's gone by then.</td><td>Rainy out. / Chance of showers.</td></tr>
+            <tr><th>Snow</th><td></td><td>The snow's gone by then.</td><td>Snowy out. / Chance of snow.</td></tr>
+            <tr><th>Thunderstorms</th><td>Thunderstorms. Keep pets inside.</td><td>The storms have passed by then.</td><td>Chance of storms.</td></tr>
+            <tr><th>Wind</th><td>Gale force winds. Potty breaks only. / Storm force winds. Keep pets inside.</td><td>Calmer by then.</td><td>Very windy out.</td></tr>
+            <tr><th>Heat</th><td>Too hot for paws.</td><td>Cooler by then.</td><td>Too warm out.</td></tr>
+            <tr><th>Cold</th><td>Too cold for a long walk.</td><td>Warmer by then.</td><td>Too chilly out.</td></tr>
+            <tr><th>Pavement</th><td>Paw check: about 50° now. Getting hot. / Too hot for paws. / Dangerously hot.</td><td>Cooler paws by then.</td><td></td></tr>
+            <tr><th>Air</th><td>Smoky air. Potty breaks only. / Stay in. Potty breaks only. (Smoky, Dusty, High ozone or Bad air)</td><td>Cleaner air by then.</td><td></td></tr>
+            <tr><th>Dark</th><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The morning briefing and the walk nudge use the same checks, with their own wording.</p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 FangJet LLC</span>
+        <nav>
+          <a href="/best-time-to-walk">Walk times</a>
+          <a href="/paw-safety">Paw safety</a>
+          <a href="/support">Support</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

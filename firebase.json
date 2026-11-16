@@ -78,7 +78,7 @@
         ]
       },
       {
-        "source": "/@(privacy|support|terms|paw-safety|best-time-to-walk)",
+        "source": "/@(privacy|support|terms|paw-safety|best-time-to-walk|walk-card)",
         "headers": [
           {
             "key": "Cache-Control",
@@ -92,6 +92,15 @@
           {
             "key": "Cache-Control",
             "value": "public, max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "/walk-card",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
           }
         ]
       }
