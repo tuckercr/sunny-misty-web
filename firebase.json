@@ -78,7 +78,7 @@
         ]
       },
       {
-        "source": "/@(privacy|support|terms|paw-safety|best-time-to-walk|too-cold-to-walk|walk-card)",
+        "source": "/@(privacy|support|terms|paw-safety|best-time-to-walk|too-cold-to-walk|wildfire-smoke|walk-card)",
         "headers": [
           {
             "key": "Cache-Control",
