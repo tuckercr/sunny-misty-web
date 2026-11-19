@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sunny &amp; Misty: Pet Weather, with dog walk times and paw safety</title>
-    <meta name="description" content="Know the best times to walk the dog and whether the pavement is too hot for paws. A free pet weather app for iPhone, iPad and Android, with no ads and no account." />
+    <meta name="description" content="Know the best times to walk the dog and whether the pavement is too hot for paws. A free pet weather app for iPhone, iPad and Android, with no ads." />
     <link rel="canonical" href="https://sunnyandmisty.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sunnyandmisty.com/" />
@@ -46,8 +46,86 @@
             "applicationCategory": "WeatherApplication",
             "operatingSystem": "iOS 17 or later, Android",
             "installUrl": ["https://apps.apple.com/app/id6827945995", "https://play.google.com/store/apps/details?id=com.fangjet.weather"],
+            "screenshot": [
+              "https://sunnyandmisty.com/screenshots/tokyo.webp",
+              "https://sunnyandmisty.com/screenshots/rome-night.webp",
+              "https://sunnyandmisty.com/screenshots/alice-springs-tiles.webp"
+            ],
+            "featureList": [
+              "Best walk times, with a second option",
+              "Paw Check pavement temperature",
+              "Feels like, humidity and wind for pets",
+              "Air quality on your own country's scale",
+              "Animated rain radar",
+              "Hourly and 7-day forecasts",
+              "Morning briefing and walk reminders",
+              "Works offline"
+            ],
+            "sameAs": ["https://apps.apple.com/app/id6827945995", "https://play.google.com/store/apps/details?id=com.fangjet.weather"],
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
             "publisher": { "@id": "https://sunnyandmisty.com/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://sunnyandmisty.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is it free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. There are no ads, no subscriptions and no account to make."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which phones does it run on?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "iPhone and iPad with iOS 17 or later, and Android phones. It's on the App Store and Google Play."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Sunny choose the walk times?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sunny checks each hour left today (after dark, tomorrow's) for rain, how warm or cold it feels, daylight, wind, storms, air quality and how hot the pavement is. The first good spell is the best time, and the next one is a second option. With no good hours left, the card says why. If you don't have a dog, switch off \"I have a dog\" in Settings to hide the walk card."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is the pavement so much hotter than the air?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Asphalt soaks up the sun. On a sunny 25°C (77°F) day it can pass 50°C (122°F), hot enough to hurt paws. Paw Check estimates it from the temperature and the sun. If in doubt, hold the back of your hand on the pavement for seven seconds: too hot for your hand is too hot for paws. More in our guide to paw safety."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a dog?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not at all. Cat people, and people with no pets at all, get the same forecast and the same two pets. Without a dog the walk card and the walk nudge are hidden."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where does the weather come from?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Forecasts, current conditions and air quality come from Open-Meteo, with OpenWeather as a backup, and the radar from RainViewer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does it know about me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Very little, and nothing that identifies you. Your cities and settings stay on your phone. The privacy policy has the details."
+                }
+              }
+            ]
           }
         ]
       }
@@ -70,10 +148,11 @@
         <div class="wrap">
           <div class="hero-text">
             <img class="hero-brand" src="/src/assets/brand.webp" width="800" height="229" alt="Sunny &amp; Misty, Pet Weather" />
+            <p class="eyebrow">The free pet weather app for dog walks</p>
             <h1>Know the best time to walk the dog</h1>
             <p>And whether the pavement is too hot for paws. Sunny the dog and Misty the cat act out the forecast, so one glance tells you if it's a sunglasses day, an umbrella day or a stay-under-the-blanket day.</p>
             <div class="stores">
-              <a class="store" href="https://play.google.com/store/apps/details?id=com.fangjet.weather">
+              <a class="store" href="https://play.google.com/store/apps/details?id=com.fangjet.weather&amp;referrer=utm_source%3Dsunnyandmisty.com%26utm_medium%3Dwebsite%26utm_campaign%3Dhome">
                 <small>Get it on</small><strong>Google Play</strong>
               </a>
               <a class="store" href="https://apps.apple.com/app/id6827945995">
@@ -89,7 +168,7 @@
           </div>
           <div class="hero-phone">
             <div class="phone">
-              <img src="/src/assets/tokyo.webp" width="600" height="1304" alt="Sunny and Misty in the sun on a clear 63°F day in Tokyo. The walk card says now is a great time, with a note that the air is not great for older and flat-faced dogs." />
+              <img src="/src/assets/tokyo.webp" width="600" height="1304" fetchpriority="high" alt="Sunny and Misty in the sun on a clear 63°F day in Tokyo. The walk card says now is a great time, with a note that the air is not great for older and flat-faced dogs." />
             </div>
           </div>
         </div>
@@ -249,7 +328,7 @@
           <h2 class="section-title">Let Sunny &amp; Misty check the sky</h2>
           <p>Free for iPhone, iPad and Android. Get it on the App Store or Google Play.</p>
           <div class="stores">
-            <a class="store" href="https://play.google.com/store/apps/details?id=com.fangjet.weather">
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.fangjet.weather&amp;referrer=utm_source%3Dsunnyandmisty.com%26utm_medium%3Dwebsite%26utm_campaign%3Dhome">
               <small>Get it on</small><strong>Google Play</strong>
             </a>
             <a class="store" href="https://apps.apple.com/app/id6827945995">
