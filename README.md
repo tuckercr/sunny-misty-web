@@ -15,7 +15,7 @@ npm run dev
 
 ## Pages that repeat the apps' numbers
 
-Two guides show the apps' default Remote Config values. The defaults live in both apps and in the
+Three guides show the apps' default Remote Config values. The defaults live in both apps and in the
 template in the Android repo (`firebase/remoteconfig.template.json`). When one of these changes,
 update the page (both °C and °F where it gives them), then deploy:
 
@@ -27,6 +27,10 @@ update the page (both °C and °F where it gives them), then deploy:
   (40 °C), `walk_hours_start` and `walk_hours_end` (7 AM and 8 PM), the near gale (Beaufort 7)
   and `walk_bad_air_band`. It also describes the walk card, so check it when the card's wording
   changes.
+- `too-cold-to-walk/index.html`: the walk card in the cold, from `walk_comfort_min_c` (3 °C) and
+  `pet_cold_threshold_c` (0 °C), with the captions "Too chilly out." and "Too cold for a long
+  walk.", and Paw Check's "Icy, watch for salt" (`walk_icy_pavement_c`). The temperature guide
+  above it is general advice, not the apps' numbers.
 
 ## Deploy
 
