@@ -15,7 +15,7 @@ npm run dev
 
 ## Pages that repeat the apps' numbers
 
-Three guides show the apps' default Remote Config values. The defaults live in both apps and in the
+Four guides show the apps' default Remote Config values. The defaults live in both apps and in the
 template in the Android repo (`firebase/remoteconfig.template.json`). When one of these changes,
 update the page (both °C and °F where it gives them), then deploy:
 
@@ -31,6 +31,11 @@ update the page (both °C and °F where it gives them), then deploy:
   `pet_cold_threshold_c` (0 °C), with the captions "Too chilly out." and "Too cold for a long
   walk.", and Paw Check's "Icy, watch for salt" (`walk_icy_pavement_c`). The temperature guide
   above it is general advice, not the apps' numbers.
+- `wildfire-smoke/index.html`: when the walk card stops suggesting hours for bad air, from
+  `walk_bad_air_band` (3: US AQI above 150, Europe's "Poor"), the worst band's "Stay in", and the
+  captions "Air's not great. Short walks for older and flat-faced dogs.", "Smoky air. Potty breaks
+  only.", "Smoky air. Stay in. Potty breaks only." and "Cleaner air by then." The AQI guide above
+  it is general advice, not the apps' numbers.
 
 ## Deploy
 

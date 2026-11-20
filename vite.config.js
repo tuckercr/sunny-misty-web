@@ -32,6 +32,7 @@ export default defineConfig({
         pawSafety: resolve(import.meta.dirname, 'paw-safety/index.html'),
         bestTimeToWalk: resolve(import.meta.dirname, 'best-time-to-walk/index.html'),
         tooColdToWalk: resolve(import.meta.dirname, 'too-cold-to-walk/index.html'),
+        wildfireSmoke: resolve(import.meta.dirname, 'wildfire-smoke/index.html'),
         notFound: resolve(import.meta.dirname, '404.html'),
       },
     },
